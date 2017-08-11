@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="DP.Creational.AbstractFactory.Asha" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.Primo" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.Genie" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.Lumia" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.GalaxyS2" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.Titan" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.NokiaFactory" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.HTCFactory" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.SamsungFactory" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.PhoneTypeChecker">
+    <Position X="9.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAACACAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.PhoneCreation">
+    <Position X="9.25" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DP.Creational.AbstractFactory.IDumb">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DP.Creational.AbstractFactory.ISmart">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DP.Creational.AbstractFactory.IPhoneFactory">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DP.Creational.AbstractFactory.Manufacturers">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

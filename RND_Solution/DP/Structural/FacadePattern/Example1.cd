@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DP.Structural.FacadePattern.EngineController">
+    <Position X="1.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Structural.FacadePattern.TachometerController">
+    <Position X="4" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Structural.FacadePattern.TransmissionController">
+    <Position X="9.5" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAUA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Structural.FacadePattern.TractionControlController">
+    <Position X="6.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAACAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Structural.FacadePattern.VehicleFacade">
+    <Position X="0.75" Y="2.75" Width="10.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACQAQAAgAAAABAAACAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_engineController" />
+      <Field Name="_tachometerController" />
+      <Field Name="_tractionControlController" />
+      <Field Name="_transmissionController" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DP.Structural.FacadePattern.Example1">
+    <Position X="9.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_vehicle" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="DP.Structural.FacadePattern.IEngineController">
+    <Position X="1.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DP.Structural.FacadePattern.ITachometerController">
+    <Position X="4" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DP.Structural.FacadePattern.ITransmissionController">
+    <Position X="9.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAUA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DP.Structural.FacadePattern.ITractionControlController">
+    <Position X="6.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAACAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DP.Structural.FacadePattern.IVehicleFacade">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAAAAAAAAABAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structural\FacadePattern\Example1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

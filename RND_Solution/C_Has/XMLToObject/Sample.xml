@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Employees Count="2">
+    <Employee Code="A" Name="XYZ">
+      <Address City="A" Pin="0000" >asdfasdfasdfasdfasdfasdf</Address>
+      <Contacts Mob="123456" Phone="02145235" Email="XYZ@domain.com" />
+    </Employee>
+    <Employee Code="B" Name="ABC">
+      <Address City="C" Pin="111" />
+      <Contacts Mob="78794656" Phone="+912546" Email="ABC@domain.com" />
+    </Employee>
+  </Employees>
+</Datatable>
