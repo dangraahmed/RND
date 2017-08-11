@@ -1,0 +1,10 @@
+﻿<h2>Featured Products</h2>
+<div>
+    @foreach (var product in this.Model.Products)
+    {
+        <div>
+            @this.Html.Encode(product.SummaryText)
+            @this.Html.ActionLink("Add to basket", "Add", "Basket", new { Id = product.Id }, null)
+        </div>
+    }
+</div>
