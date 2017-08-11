@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DP", "DP", "{66578BF5-DC46-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DP", "DP\DP.csproj", "{5032DAF0-62AF-4270-8D65-6866CA62443F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C_Has", "C_Has", "{A3F37B9D-D5C6-4772-ABD5-4B5D85528F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Has", "C_Has\C_Has.csproj", "{FC2191AA-AAB3-48BF-9D43-51EE8B81712C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,16 @@ Global
 		{5032DAF0-62AF-4270-8D65-6866CA62443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5032DAF0-62AF-4270-8D65-6866CA62443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5032DAF0-62AF-4270-8D65-6866CA62443F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2191AA-AAB3-48BF-9D43-51EE8B81712C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2191AA-AAB3-48BF-9D43-51EE8B81712C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2191AA-AAB3-48BF-9D43-51EE8B81712C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2191AA-AAB3-48BF-9D43-51EE8B81712C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5032DAF0-62AF-4270-8D65-6866CA62443F} = {66578BF5-DC46-4CB6-BB6F-AE55D9C7C413}
+		{FC2191AA-AAB3-48BF-9D43-51EE8B81712C} = {A3F37B9D-D5C6-4772-ABD5-4B5D85528F16}
 	EndGlobalSection
 EndGlobal
