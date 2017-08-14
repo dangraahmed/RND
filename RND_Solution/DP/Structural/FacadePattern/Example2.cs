@@ -14,7 +14,7 @@ namespace DP.Structural.FacadePattern
         /// <summary>
         /// Entry point into console application.
         /// </summary>
-        public static void Main()
+        public static void Main1()
         {
             // Facade
             Mortgage mortgage = new Mortgage();
