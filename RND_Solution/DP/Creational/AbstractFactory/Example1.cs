@@ -15,7 +15,6 @@ namespace DP.Creational.AbstractFactory
         string Name();
     }
 
-    
     class Asha : IDumb
     {
         public string Name()
@@ -63,6 +62,7 @@ namespace DP.Creational.AbstractFactory
             return "Titan";
         }
     }
+
 
     interface IPhoneFactory
     {
@@ -112,6 +112,7 @@ namespace DP.Creational.AbstractFactory
         }
     }
 
+
     enum Manufacturers
     {
         Samsung,
@@ -121,15 +122,22 @@ namespace DP.Creational.AbstractFactory
 
     class PhoneTypeChecker
     {
-        
+
         IPhoneFactory _factory;
         readonly Manufacturers _manu;
+
+        public PhoneTypeChecker()
+        {
+        }
 
         public PhoneTypeChecker(Manufacturers m)
         {
             _manu = m;
         }
 
+        /// <summary>
+        /// This method will create new object using _manu and then will provide its details
+        /// </summary>
         public void CheckProducts()
         {
             switch (_manu)
@@ -148,6 +156,15 @@ namespace DP.Creational.AbstractFactory
             Console.WriteLine(_manu.ToString() + ":\nSmart Phone: " +
             _factory.GetSmart().Name() + "\nDumb Phone: " + _factory.GetDumb().Name());
         }
+
+        /// <summary>
+        /// This method provide its details using passed parameter
+        /// </summary>
+        /// <param name="iPhoneFactory">Object whose details need to view</param>
+        public void CheckProducts(IPhoneFactory iPhoneFactory)
+        {
+            Console.WriteLine("Smart Phone: " + iPhoneFactory.GetSmart().Name() + "\nDumb Phone: " + iPhoneFactory.GetDumb().Name());
+        }
     }
 
     class PhoneCreation
@@ -157,21 +174,21 @@ namespace DP.Creational.AbstractFactory
 
         private static Dictionary<Manufacturers, IPhoneFactory> _phoneDictionary;
 
-        public PhoneCreation(Manufacturers m)
+        private PhoneCreation()
         {
             _phoneDictionary = new Dictionary<Manufacturers, IPhoneFactory>();
-
-            this.PhoneManufacturers = m;
-
             _phoneDictionary.Add(Manufacturers.Nokia, new NokiaFactory());
             _phoneDictionary.Add(Manufacturers.Samsung, new SamsungFactory());
             _phoneDictionary.Add(Manufacturers.HTC, new HTCFactory());
+        }
+        public PhoneCreation(Manufacturers m) : this()
+        {
+            this.PhoneManufacturers = m;
         }
 
         public IPhoneFactory GetProducts()
         {
             return _phoneDictionary[PhoneManufacturers];
-            
         }
     }
 
@@ -179,37 +196,37 @@ namespace DP.Creational.AbstractFactory
     {
         static void Main1(string[] args)
         {
-            PhoneTypeChecker checker;
+            //PhoneTypeChecker checker;
 
-            checker = new PhoneTypeChecker(Manufacturers.Samsung);
-            checker.CheckProducts();
+            //checker = new PhoneTypeChecker(Manufacturers.Samsung);
+            //checker.CheckProducts();
 
-            checker = new PhoneTypeChecker(Manufacturers.HTC);
-            checker.CheckProducts();
-            
-
-            checker = new PhoneTypeChecker(Manufacturers.Nokia);
-            checker.CheckProducts();
-
-            Console.ReadLine();
+            //checker = new PhoneTypeChecker(Manufacturers.HTC);
+            //checker.CheckProducts();
 
 
+            //checker = new PhoneTypeChecker(Manufacturers.Nokia);
+            //checker.CheckProducts();
+
+            //Console.ReadLine();
+
+
+            PhoneTypeChecker checker = new PhoneTypeChecker();
             PhoneCreation phoneCreation;
-            IPhoneFactory currentPhone;
             phoneCreation = new PhoneCreation(Manufacturers.Samsung);
-            currentPhone= phoneCreation.GetProducts();
-            Console.WriteLine(currentPhone.GetSmart().Name());
-            Console.WriteLine(currentPhone.GetDumb().Name());
+            Console.WriteLine("Samsung");
+            checker.CheckProducts(phoneCreation.GetProducts());
+            Console.WriteLine("");
 
             phoneCreation = new PhoneCreation(Manufacturers.HTC);
-            currentPhone = phoneCreation.GetProducts();
-            Console.WriteLine(currentPhone.GetSmart().Name());
-            Console.WriteLine(currentPhone.GetDumb().Name());
-            
+            Console.WriteLine("HTC");
+            checker.CheckProducts(phoneCreation.GetProducts());
+            Console.WriteLine("");
+
             phoneCreation = new PhoneCreation(Manufacturers.Nokia);
-            currentPhone = phoneCreation.GetProducts();
-            Console.WriteLine(currentPhone.GetSmart().Name());
-            Console.WriteLine(currentPhone.GetDumb().Name());
+            Console.WriteLine("Nokia");
+            checker.CheckProducts(phoneCreation.GetProducts());
+            Console.WriteLine("");
 
             Console.ReadLine();
         }

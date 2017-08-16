@@ -45,7 +45,7 @@ namespace DP.Behavioral.Command
 
         public void Execute()
         {
-            _light.TurnOn();    
+            _light.TurnOn();
         }
 
     }
@@ -68,35 +68,39 @@ namespace DP.Behavioral.Command
 
     public class Program
     {
-        private static void Main1(string[] args)
+        private static void Main(string[] args)
         {
             Light lamp = new Light();
             ICommand switchUp = new FlipUpCommand(lamp);
             ICommand switchDown = new FlipDownCommand(lamp);
- 
+
             Switch s = new Switch();
- 
-            try
+
+            while (true)
             {
-                //if (args[0].ToUpper().Equals("ON"))
-                if ("ON" == "ON")
+                Console.WriteLine("\"ON\" or \"OFF\" or \"X\"?");
+                string command = Console.ReadLine();
+                try
                 {
-                    s.StoreAndExecute(switchUp);
-                    Console.ReadLine();
+                    if (command.ToUpper() == "ON")
+                    {
+                        s.StoreAndExecute(switchUp);
+                        continue;
+                    }
+                    if (command.ToUpper() == "OFF")
+                    {
+                        s.StoreAndExecute(switchDown);
+                        continue;
+                    }
                     return;
                 }
-                if (args[0].ToUpper().Equals("OFF"))
+                catch (Exception e)
                 {
-                    s.StoreAndExecute(switchDown);
-                    return;
+                    Console.WriteLine("Arguments required.");
                 }
-                Console.WriteLine("Argument \"ON\" or \"OFF\" is required.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Arguments required.");
             }
             
+
         }
     }
 }
