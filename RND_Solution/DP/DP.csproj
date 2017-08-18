@@ -63,6 +63,7 @@
     <None Include="Behavioral\Strategy\Example1.cd" />
     <None Include="Creational\AbstractFactory\Example1.cd" />
     <None Include="Creational\Factory\Example1.cd" />
+    <None Include="Creational\Factory\Example_2.cd" />
     <None Include="Structural\DecoratorPattern\Example1.cd" />
     <None Include="Structural\FacadePattern\Example1.cd" />
     <None Include="Structural\FacadePattern\Example2.cd" />
