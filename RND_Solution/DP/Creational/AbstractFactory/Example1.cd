@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="DP.Creational.AbstractFactory.Asha" BaseTypeListCollapsed="true">
     <Position X="4.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
@@ -72,19 +72,25 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="DP.Creational.AbstractFactory.PhoneTypeChecker">
-    <Position X="9.25" Y="1" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAACACAAAAA=</HashCode>
-      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="DP.Creational.AbstractFactory.PhoneCreation">
-    <Position X="9.25" Y="3" Width="4" />
+    <Position X="6.5" Y="2.25" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Creational\AbstractFactory\Example1.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PhoneManufacturers" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DP.Creational.AbstractFactory.Example1">
+    <Position X="6.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Creational\AbstractFactory\Example1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="phoneCreation" />
+    </ShowAsAssociation>
   </Class>
   <Interface Name="DP.Creational.AbstractFactory.IDumb">
     <Position X="2.5" Y="0.5" Width="1.5" />

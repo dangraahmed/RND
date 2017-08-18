@@ -64,7 +64,7 @@ namespace DP.Creational.Factory
     class Example_2
     {
         static VehicleFactory factory;
-        public static void Main(string[] args)
+        public static void Main1(string[] args)
         {
             factory = new ConcreteVehicleFactory();
             IFactory scooter = factory.GetVehicle("Scooter");
