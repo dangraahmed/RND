@@ -124,35 +124,43 @@ namespace DP.Structural.DecoratorPattern
 
     public class Example1
     {
+        static CakeBase cakeBase;
+        static CreamDecorator creamCake;
+        static CherryDecorator cherryCake;
+        static ArtificialScentDecorator scentedCake;
+        static NameCardDecorator nameCardOnCake;
+        static PastryBase pastry;
+        static CreamDecorator creamPastry;
+        static CherryDecorator cherryPastry;
         public static void Main1(string[] args)
         {
             // Let us create a Simple Cake Base first
-            CakeBase cBase = new CakeBase();
-            PrintProductDetails(cBase);
+            cakeBase = new CakeBase();
+            PrintProductDetails(cakeBase);
 
             // Lets add cream to the cake
-            CreamDecorator creamCake = new CreamDecorator(cBase);
+            creamCake = new CreamDecorator(cakeBase);
             PrintProductDetails(creamCake);
 
             // Let now add a Cherry on it
-            CherryDecorator cherryCake = new CherryDecorator(creamCake);
+            cherryCake = new CherryDecorator(creamCake);
             PrintProductDetails(cherryCake);
 
             // Lets now add Scent to it
-            ArtificialScentDecorator scentedCake = new ArtificialScentDecorator(cherryCake);
+            scentedCake = new ArtificialScentDecorator(cherryCake);
             PrintProductDetails(scentedCake);
 
             // Finally add a Name card on the cake
-            NameCardDecorator nameCardOnCake = new NameCardDecorator(scentedCake);
+            nameCardOnCake = new NameCardDecorator(scentedCake);
             PrintProductDetails(nameCardOnCake);
 
             // Lets now create a simple Pastry
-            PastryBase pastry = new PastryBase();
+            pastry = new PastryBase();
             PrintProductDetails(pastry);
 
             // Lets just add cream and cherry only on the pastry 
-            CreamDecorator creamPastry = new CreamDecorator(pastry);
-            CherryDecorator cherryPastry = new CherryDecorator(creamPastry);
+            creamPastry = new CreamDecorator(pastry);
+            cherryPastry = new CherryDecorator(creamPastry);
             PrintProductDetails(cherryPastry);
 
             Console.ReadLine();

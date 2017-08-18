@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="DP.Structural.DecoratorPattern.BakeryComponent">
     <Position X="7.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -8,56 +8,61 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.Decorator">
-    <Position X="7.75" Y="2.75" Width="1.5" />
+    <Position X="7.5" Y="2.5" Width="3" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAABAEAAAAAQAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.ArtificialScentDecorator">
-    <Position X="8.5" Y="6" Width="2" />
+    <Position X="6.75" Y="5.25" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.CherryDecorator">
-    <Position X="5" Y="6" Width="1.5" />
+    <Position X="3.25" Y="5.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.CreamDecorator">
-    <Position X="6.75" Y="6" Width="1.5" />
+    <Position X="5" Y="6.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.NameCardDecorator">
-    <Position X="10.75" Y="6" Width="2" />
+    <Position X="10" Y="6.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DP.Structural.DecoratorPattern.Example1" Collapsed="true">
-    <Position X="16" Y="0.75" Width="1.5" />
+  <Class Name="DP.Structural.DecoratorPattern.Example1">
+    <Position X="1.5" Y="1" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAgAAAAAAAgABAAAAAgAAIsAEAAAAAAAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pastry" />
+      <Field Name="creamPastry" />
+      <Field Name="cherryPastry" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.CakeBase">
-    <Position X="5.75" Y="2.75" Width="1.5" />
+    <Position X="11" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAABAEAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.DecoratorPattern.PastryBase">
-    <Position X="9.75" Y="2.75" Width="1.5" />
+    <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAABAEAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Structural\DecoratorPattern\Example1.cs</FileName>
