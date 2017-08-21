@@ -194,7 +194,9 @@ namespace DP.Creational.AbstractFactory
 
     class Example1
     {
-        static void Main1(string[] args)
+        static PhoneTypeChecker checker;
+        static PhoneCreation phoneCreation;
+        static void Main(string[] args)
         {
             //PhoneTypeChecker checker;
 
@@ -211,8 +213,8 @@ namespace DP.Creational.AbstractFactory
             //Console.ReadLine();
 
 
-            PhoneTypeChecker checker = new PhoneTypeChecker();
-            PhoneCreation phoneCreation;
+            checker = new PhoneTypeChecker();
+
             phoneCreation = new PhoneCreation(Manufacturers.Samsung);
             Console.WriteLine("Samsung");
             checker.CheckProducts(phoneCreation.GetProducts());

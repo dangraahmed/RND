@@ -1,46 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="DP.Structural.FacadePattern.Example2">
-    <Position X="14.75" Y="1" Width="1.5" />
+    <Position X="6.5" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\FacadePattern\Example2.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mortgage" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DP.Structural.FacadePattern.Bank">
-    <Position X="2.25" Y="5.25" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\FacadePattern\Example2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.FacadePattern.Credit">
-    <Position X="4" Y="5.25" Width="1.5" />
+    <Position X="2.25" Y="3.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\FacadePattern\Example2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.FacadePattern.Loan">
-    <Position X="5.75" Y="5.25" Width="1.5" />
+    <Position X="4.5" Y="2.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\FacadePattern\Example2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.FacadePattern.Customer">
-    <Position X="13" Y="1" Width="1.5" />
+    <Position X="7.25" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\FacadePattern\Example2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DP.Structural.FacadePattern.Mortgage">
-    <Position X="4" Y="3" Width="1.5" />
+    <Position X="2.25" Y="0.75" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAABAAAIAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structural\FacadePattern\Example2.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_bank" />
+      <Field Name="_credit" />
+      <Field Name="_loan" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Tahoma" Size="8.25" />
 </ClassDiagram>

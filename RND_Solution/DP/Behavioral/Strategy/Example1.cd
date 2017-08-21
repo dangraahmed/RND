@@ -26,8 +26,11 @@
   </Class>
   <Class Name="DP.Behavioral.Strategy.Person">
     <Position X="3.5" Y="3.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Enum Name="DP.Behavioral.Strategy.Person.PersonType" Collapsed="true">
+      <Enum Name="DP.Behavioral.Strategy.Person.PersonType">
         <TypeIdentifier>
           <NewMemberFileName>Behavioral\Strategy\Example1.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -41,7 +44,7 @@
   <Class Name="DP.Behavioral.Strategy.Example1">
     <Position X="1" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Behavioral\Strategy\Example1.cs</FileName>
     </TypeIdentifier>
   </Class>
