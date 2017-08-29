@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example_1", "Example_1", "{
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WeatherMicroservice", "WeatherMicroservice\WeatherMicroservice.xproj", "{3551F994-CE66-44AB-8E4D-8DDE3261BAA1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example_2", "Example_2", "{063DF69F-5B23-488E-B320-0CD3B03E8457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWINRestService", "OWINRestService\OWINRestService.csproj", "{5EF0B80D-5CA6-4ADD-9192-5D3D96B898ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,16 @@ Global
 		{3551F994-CE66-44AB-8E4D-8DDE3261BAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3551F994-CE66-44AB-8E4D-8DDE3261BAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3551F994-CE66-44AB-8E4D-8DDE3261BAA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF0B80D-5CA6-4ADD-9192-5D3D96B898ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF0B80D-5CA6-4ADD-9192-5D3D96B898ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF0B80D-5CA6-4ADD-9192-5D3D96B898ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF0B80D-5CA6-4ADD-9192-5D3D96B898ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3551F994-CE66-44AB-8E4D-8DDE3261BAA1} = {6195A014-E304-4368-A06C-908B3921F8CA}
+		{5EF0B80D-5CA6-4ADD-9192-5D3D96B898ED} = {063DF69F-5B23-488E-B320-0CD3B03E8457}
 	EndGlobalSection
 EndGlobal
