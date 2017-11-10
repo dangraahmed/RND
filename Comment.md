@@ -10,3 +10,8 @@ Microservice solution project summary
     - Microsoft.Owin
     - Microsoft.Owin.Hosting
     - Microsoft.Owin.Host.HttpListener
+- WeatherMicroservice1
+  - Project type : normal console application using Visual Source Code
+  - Comment this project is same as Example_1 / WeatherMicroservice but in normal console application and not in .net core
+  - Reference used for hosting 
+    - Microsoft.AspNetCore.Server.Kestrel

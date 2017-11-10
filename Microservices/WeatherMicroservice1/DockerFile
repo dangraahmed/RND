@@ -1,0 +1,16 @@
+FROM microsoft/dotnet
+WORKDIR /app
+
+# copy csproj and restore as distinct layers
+
+COPY ./ .
+RUN dotnet restore
+
+# copy and build everything else
+
+COPY . .
+
+# RUN dotnet restore
+RUN dotnet publish -c Release -o out
+
+ENTRYPOINT ["dotnet", "out/WeatherMicroservice1.dll", "--server.urls", "http://localhost:5000"]
