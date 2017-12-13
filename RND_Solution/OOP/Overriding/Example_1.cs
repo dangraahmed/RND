@@ -34,7 +34,7 @@ namespace OOP.Overriding
 
     public class Example_1
     {
-        public static void Main(string[] args)
+        public static void Main1(string[] args)
         {
             baseClass fullBaseObj = new baseClass();
             baseClass baseObj = new deriveClass1();

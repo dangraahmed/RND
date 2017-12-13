@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+#MyCalculator.UI Folder
+MyCalculator.UI/

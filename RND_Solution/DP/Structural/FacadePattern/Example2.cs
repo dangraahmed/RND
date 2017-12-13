@@ -11,13 +11,14 @@ namespace DP.Structural.FacadePattern
     /// </summary>
     class Example2
     {
+        static Mortgage mortgage;
         /// <summary>
         /// Entry point into console application.
         /// </summary>
         public static void Main1()
         {
             // Facade
-            Mortgage mortgage = new Mortgage();
+            mortgage = new Mortgage();
 
             // Evaluate mortgage eligibility for customer
             Customer customer = new Customer("Ann McKinsey");

@@ -1,0 +1,16 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Light+ Dimmed",
+    "typescript.check.tscVersion": false,
+    "workbench.welcome.enabled": true,
+    "workbench.iconTheme": "file-icons",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "auto-close-tag.SublimeText3Mode": false,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#aaaaaa",
+        "activityBar.foreground": "#444444"
+    },
+    "editor.minimap.enabled": false,
+    "explorer.openEditors.visible": 0
+}

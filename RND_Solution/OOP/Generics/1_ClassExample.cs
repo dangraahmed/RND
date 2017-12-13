@@ -19,15 +19,20 @@ namespace OOP.Generics
 
     class _1_ClassExample
     {
-        public static void Main1(string[] args)
+        public static void Main(string[] args)
         { 
             GenericsList<int> objInt = new GenericsList<int>();
             GenericsList<string> objStr = new GenericsList<string>();
             GenericsList<_1_ClassExample> objExa = new GenericsList<_1_ClassExample>();
 
+            objInt.Add();
             objInt.Add(10);
+
             objStr.Add();
+            objStr.Add("10");
+
             objExa.Add();
+            objExa.Add(new _1_ClassExample());
 
             Console.ReadLine();
         }
