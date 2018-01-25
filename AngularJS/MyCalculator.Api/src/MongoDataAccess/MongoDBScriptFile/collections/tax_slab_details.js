@@ -1,1 +1,0 @@
-db.createCollection('tax_slab_details')
