@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Behavioral\Command\Example1.cs" />
     <Compile Include="Behavioral\Command\Example2.cs" />
+    <Compile Include="Behavioral\Memento\Example_1.cs" />
     <Compile Include="Behavioral\Strategy\Example1.cs" />
     <Compile Include="Creational\AbstractFactory\Example1.cs" />
     <Compile Include="Creational\AbstractFactory\Example2.cs" />
