@@ -48,44 +48,56 @@
       "segments": [
         {
           "background": "p:bg",
+          "foreground": "#0d6da8",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": "  {{ .Full }} ",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "type": "dotnet"
+        },
+        {
+          "background": "p:bg",
           "foreground": "#689f63",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "fetch_version": true
-          },
-          "style": "powerline",
-          "template": " \uf898 {{ .Full }} <p:separator-fg>\ue0b3</>",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": " \uf898 {{ .Full }} ",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
           "type": "node"
         },
         {
           "background": "p:bg",
           "foreground": "#FFDE57",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": " \ue235 {{ .Full }} ",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "type": "python",
           "properties": {
             "display_mode": "files",
             "fetch_virtual_env": false
-          },
-          "style": "powerline",
-          "template": " \ue235 {{ .Full }} <p:separator-fg>\ue0b3</>",
-          "type": "python"
+          }
         },
         {
           "background": "p:bg",
-          "foreground": "#0d6da8",
+          "foreground_templates": [
+            "{{ if gt .PhysicalPercentUsed 89 }}red{{ else }}green{{ end }}"
+          ],
           "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "template": "\ue77f  {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} ",
+          "template": "  {{ round .PhysicalPercentUsed .Precision }}% ",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "type": "dotnet"
+          "properties": {
+            "precision": 2,
+            "always_enabled": true
+          },
+          "type": "sysinfo"
         },
         {
           "background": "p:bg",
           "foreground": "green",
           "leading_diamond": "\ue0b2",
           "style": "diamond",
-          "template": "{{ .FormattedMs }}",
+          "template": " {{ .FormattedMs }} ",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
           "properties": {
             "always_enabled": true
