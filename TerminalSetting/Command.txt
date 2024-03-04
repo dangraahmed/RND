@@ -1,0 +1,4 @@
+https://dev.to/ansonh/customize-beautify-your-windows-terminal-2022-edition-541l
+winget install JanDeDobbeleer.OhMyPosh
+notepad $PROFILE
+oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression
