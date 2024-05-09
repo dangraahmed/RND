@@ -1,6 +1,11 @@
 https://dev.to/ansonh/customize-beautify-your-windows-terminal-2022-edition-541l
 winget install JanDeDobbeleer.OhMyPosh
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+-- For load on startup
 new-item -type file -path $profile -force
 notepad $PROFILE
 oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression
+
+-- For Windows Terminal/Powershell Intellisense
+Install-Module -Name PSReadLine -force
