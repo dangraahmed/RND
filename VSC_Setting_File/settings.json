@@ -1,16 +1,38 @@
 {
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Light+ Dimmed",
-    "typescript.check.tscVersion": false,
-    "workbench.welcome.enabled": true,
-    "workbench.iconTheme": "file-icons",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "auto-close-tag.SublimeText3Mode": false,
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#aaaaaa",
-        "activityBar.foreground": "#444444"
-    },
-    "editor.minimap.enabled": false,
-    "explorer.openEditors.visible": 0
+  "diffEditor.renderSideBySide": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSurroundingLines": 5,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "bold",
+  "editor.fontFamily": "Cascadia Mono",
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "explorer.openEditors.visible": 0,
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "i18n-ally.displayLanguage": "en",
+  "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1111111e",
+    "activityBar.foreground": "#111111ee",
+    "editor.lineHighlightBackground": "#133fcf1e",
+    "editor.lineHighlightBorder": "#133fcf1e"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "scm.defaultViewMode": "tree",
+  "terminal.integrated.hideOnStartup": "always",
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  }
 }
