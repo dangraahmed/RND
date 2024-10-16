@@ -17,15 +17,15 @@
   "i18n-ally.displayLanguage": "en",
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+  "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.colorCustomizations": {
-    "activityBar.background": "#1111111e",
-    "activityBar.foreground": "#111111ee",
+    // "activityBar.background": "#1111111e",
+    // "activityBar.foreground": "#111111ee",
     "editor.lineHighlightBackground": "#133fcf1e",
-    "editor.lineHighlightBorder": "#133fcf1e"
+    "editor.lineHighlightBorder": "#aaaa"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
