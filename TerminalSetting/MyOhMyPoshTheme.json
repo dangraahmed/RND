@@ -1,133 +1,142 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "blocks": [
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "foreground": "lightYellow",
-          "style": "plain",
-          "template": " \uf0e7 ",
-          "type": "root"
-        },
-        {
-          "background": "p:bg",
-          "foreground": "lightCyan",
-          "properties": {
-            "mixed_threshold": 6,
-            "style": "folder"
-          },
-          "style": "plain",
-          "template": "<transparent,p:bg>\ue0b0</> \uf07c  {{ .Path }} ",
-          "type": "path"
-        },
-        {
-          "background": "p:bg",
-          "foreground": "green",
-          "properties": {
-            "branch_icon": "\ue725 ",
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": false
-          },
-          "style": "plain",
-          "template": "<p:separator-fg>\ue0b1 </>{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
-          "type": "git"
-        },
-        {
-          "foreground": "p:bg",
-          "style": "plain",
-          "template": "\ue0b0 ",
-          "type": "text"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "segments": [
-        {
-          "background": "p:bg",
-          "foreground": "#0d6da8",
-          "leading_diamond": "\ue0b2",
-          "style": "diamond",
-          "template": "  {{ .Full }} ",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "type": "dotnet"
-        },
-        {
-          "background": "p:bg",
-          "foreground": "#689f63",
-          "leading_diamond": "\ue0b2",
-          "style": "diamond",
-          "template": " \uf898 {{ .Full }} ",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "type": "node"
-        },
-        {
-          "background": "p:bg",
-          "foreground": "#FFDE57",
-          "leading_diamond": "\ue0b2",
-          "style": "diamond",
-          "template": " \ue235 {{ .Full }} ",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "type": "python",
-          "properties": {
-            "display_mode": "files",
-            "fetch_virtual_env": false
-          }
-        },
-        {
-          "background": "p:bg",
-          "foreground_templates": [
-            "{{ if gt .PhysicalPercentUsed 89 }}red{{ else }}green{{ end }}"
-          ],
-          "leading_diamond": "\ue0b2",
-          "style": "diamond",
-          "template": "  {{ round .PhysicalPercentUsed .Precision }}% ",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "properties": {
-            "precision": 2,
-            "always_enabled": true
-          },
-          "type": "sysinfo"
-        },
-        {
-          "background": "p:bg",
-          "foreground": "green",
-          "leading_diamond": "\ue0b2",
-          "style": "diamond",
-          "template": " {{ .FormattedMs }} ",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "properties": {
-            "always_enabled": true
-          },
-          "type": "executiontime"
-        },
-        {
-          "background": "p:bg",
-          "background_templates": [
-            "{{ if gt .Code 0 }}red{{ end }}"
-          ],
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}white{{ else }}green{{ end }}"
-          ],
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "powerline",
-          "template": " {{ if gt .Code 0 }}\uf071{{ else }}\uf00c{{ end }} ",
-          "type": "exit"
-        }
-      ],
-      "type": "rprompt"
-    }
-  ],
   "palette": {
     "bg": "#3f3f3f",
     "separator-fg": "#919191"
   },
-  "version": 2
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none",
+            "mixed_threshold": 6,
+            "style": "folder"
+          },
+          "template": "<transparent,p:bg>\ue0b0</> <b>{{ .Path }}</b> ",
+          "foreground": "#F1FA8C",
+          "background": "p:bg",
+          "type": "path",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cache_duration": "none",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": false
+          },
+          "template": "<p:separator-fg><b>//</b> </><b>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
+          "foreground": "#43CCEA",
+          "background": "p:bg",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue0b0 ",
+          "foreground": "p:bg",
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "rprompt",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "template": " \ue77f {{ .Full }} ",
+          "foreground": "#0d6da8",
+          "background": "p:bg",
+          "type": "dotnet",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "template": " \uf898 {{ .Full }} ",
+          "foreground": "#689f63",
+          "background": "p:bg",
+          "type": "node",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "display_mode": "files",
+            "fetch_virtual_env": false
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "template": " \ue235 {{ .Full }} ",
+          "foreground": "#FFDE57",
+          "background": "p:bg",
+          "type": "python",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none",
+            "precision": 2
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "template": " \ue266 {{ round .PhysicalPercentUsed .Precision }}% ",
+          "background": "p:bg",
+          "type": "sysinfo",
+          "style": "diamond",
+          "foreground_templates": [
+            "{{ if gt .PhysicalPercentUsed 89 }}red{{ else }}green{{ end }}"
+          ]
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
+          "template": " {{ .FormattedMs }} ",
+          "foreground": "green",
+          "background": "p:bg",
+          "type": "executiontime",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "template": " {{ if gt .Code 0 }}\uf071{{ else }}\uf00c{{ end }} ",
+          "powerline_symbol": "\ue0b2",
+          "background": "p:bg",
+          "type": "exit",
+          "style": "powerline",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}white{{ else }}green{{ end }}"
+          ],
+          "background_templates": [
+            "{{ if gt .Code 0 }}red{{ end }}"
+          ],
+          "invert_powerline": true
+        }
+      ]
+    }
+  ],
+  "version": 3
 }
