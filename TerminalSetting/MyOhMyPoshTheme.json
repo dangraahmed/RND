@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "bg": "#3f3f3f",
-    "separator-fg": "#919191"
+    "separator-fg": "#919191",
+    "fg-path": "#43CCEA",
+    "fg-git": "#39FF14"
   },
   "blocks": [
     {
@@ -16,7 +18,8 @@
             "style": "folder"
           },
           "template": "<transparent,p:bg>\ue0b0</> <b>{{ .Path }}</b> ",
-          "foreground": "#F1FA8C",
+          "trailing_diamond": "\ue0b0",
+          "foreground": "p:fg-path",
           "background": "p:bg",
           "type": "path",
           "style": "diamond"
@@ -29,20 +32,13 @@
             "fetch_status": true,
             "fetch_upstream_icon": false
           },
-          "template": "<p:separator-fg><b>//</b> </><b>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
-          "foreground": "#43CCEA",
+          "template": "<p:separator-fg> </><b>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
+          "trailing_diamond": "\ue0b0 ",
+          "leading_diamond": "<transparent,p:bg>\ue0b0",
+          "foreground": "p:fg-git",
           "background": "p:bg",
           "type": "git",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue0b0 ",
-          "foreground": "p:bg",
-          "type": "text",
-          "style": "plain"
+          "style": "diamond"
         }
       ],
       "newline": true
@@ -56,7 +52,7 @@
           },
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \ue77f {{ .Full }} ",
+          "template": " \ue77f <b>{{ .Full }}</b> ",
           "foreground": "#0d6da8",
           "background": "p:bg",
           "type": "dotnet",
@@ -68,7 +64,7 @@
           },
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \uf898 {{ .Full }} ",
+          "template": " \uf898 <b>{{ .Full }}</b> ",
           "foreground": "#689f63",
           "background": "p:bg",
           "type": "node",
@@ -82,7 +78,7 @@
           },
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \ue235 {{ .Full }} ",
+          "template": " \ue235 <b>{{ .Full }}</b> ",
           "foreground": "#FFDE57",
           "background": "p:bg",
           "type": "python",
@@ -96,12 +92,12 @@
           },
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \ue266 {{ round .PhysicalPercentUsed .Precision }}% ",
+          "template": " \ue266 <b>{{ round .PhysicalPercentUsed .Precision }}% </b>",
           "background": "p:bg",
           "type": "sysinfo",
           "style": "diamond",
           "foreground_templates": [
-            "{{ if gt .PhysicalPercentUsed 89 }}red{{ else }}green{{ end }}"
+            "{{ if gt .PhysicalPercentUsed 89 }}red{{ else }}p:fg-git{{ end }}"
           ]
         },
         {
@@ -111,8 +107,8 @@
           },
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " {{ .FormattedMs }} ",
-          "foreground": "green",
+          "template": " <b>{{ .FormattedMs }}</b> ",
+          "foreground": "p:fg-git",
           "background": "p:bg",
           "type": "executiontime",
           "style": "diamond"
@@ -128,7 +124,7 @@
           "type": "exit",
           "style": "powerline",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}white{{ else }}green{{ end }}"
+            "{{ if gt .Code 0 }}white{{ else }}p:fg-git{{ end }}"
           ],
           "background_templates": [
             "{{ if gt .Code 0 }}red{{ end }}"
