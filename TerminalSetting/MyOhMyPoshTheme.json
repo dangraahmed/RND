@@ -134,5 +134,10 @@
       ]
     }
   ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "p:fg-git",
+    "template": "\n\ue285 "
+  },
   "version": 3
 }
