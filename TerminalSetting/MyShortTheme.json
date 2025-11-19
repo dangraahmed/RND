@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "bg": "#3f3f3f",
+    "separator-fg": "#919191"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none",
+            "mixed_threshold": 6,
+            "style": "folder"
+          },
+          "template": "<transparent,p:bg>\ue0b0</> <b>{{ .Path }}</b> ",
+          "trailing_diamond": "\ue0b0",
+          "foreground": "#43CCEA",
+          "background": "p:bg",
+          "type": "path",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cache_duration": "none",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": false
+          },
+          "template": "<p:separator-fg> </><b>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
+          "trailing_diamond": "\ue0b0 ",
+          "leading_diamond": "<transparent,p:bg>\ue0b0",
+          "foreground": "#39FF14",
+          "background": "p:bg",
+          "type": "git",
+          "style": "diamond"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
+}
