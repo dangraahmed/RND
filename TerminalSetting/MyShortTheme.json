@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "bg": "#3f3f3f",
-    "separator-fg": "#919191"
+    "separator-fg": "#919191",
+    "fg-path": "#43CCEA",
+    "fg-git": "#39FF14"
   },
   "blocks": [
     {
@@ -17,7 +19,7 @@
           },
           "template": "<transparent,p:bg>\ue0b0</> <b>{{ .Path }}</b> ",
           "trailing_diamond": "\ue0b0",
-          "foreground": "#43CCEA",
+          "foreground": "p:fg-path",
           "background": "p:bg",
           "type": "path",
           "style": "diamond"
@@ -33,7 +35,7 @@
           "template": "<p:separator-fg> </><b>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
           "trailing_diamond": "\ue0b0 ",
           "leading_diamond": "<transparent,p:bg>\ue0b0",
-          "foreground": "#39FF14",
+          "foreground": "p:fg-git",
           "background": "p:bg",
           "type": "git",
           "style": "diamond"
