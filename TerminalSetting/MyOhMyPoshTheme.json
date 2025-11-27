@@ -137,7 +137,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:fg-git",
-    "template": "\n\ue285 "
+    "template": "\n<b>{{ now | date \"15:04:05\" }}</b> \ue285 "
   },
   "version": 3
 }
