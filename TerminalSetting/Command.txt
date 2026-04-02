@@ -9,3 +9,15 @@ oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/them
 
 -- For Windows Terminal/Powershell Intellisense
 Install-Module -Name PSReadLine -force
+
+
+
+
+
+
+
+-------- For Linux
+curl -s https://ohmyposh.dev/install.sh | bash -s
+oh-my-posh --version
+oh-my-posh font install
+>> Select Fira Font
