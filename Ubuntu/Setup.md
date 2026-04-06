@@ -21,6 +21,31 @@ sudo apt install -y chromium-browser
 
 ---
 
+## Install GIT
+
+```bash
+sudo apt install git
+```
+
+---
+
+## Install Node
+
+1. Download and install nvm:
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+```
+2. In lieu of restarting the shell
+```bash
+\. "$HOME/.nvm/nvm.sh"
+```
+3. Download and install Node.js:
+```bash
+nvm install 24
+```
+
+---
+
 ## 💻 Install Visual Studio Code
 
 1. Download the `.deb` package from the official website.
