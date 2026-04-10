@@ -116,4 +116,20 @@ docker --version
 docker compose version
 ```
 
+### Step 7: Manage docker as a non-root user
+Create the docker group.
+```bash
+sudo groupadd docker
+```
+
+Add your user to the docker group.
+```bash
+sudo usermod -aG docker $USER
+```
+Log out and log back
+Or run following command
+```bash
+newgrp docker
+```
+
 ---
