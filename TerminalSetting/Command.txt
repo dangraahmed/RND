@@ -21,3 +21,7 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 oh-my-posh --version
 oh-my-posh font install
 >> Select Fira Font
+
+Command to apply theme
+eval "$(oh-my-posh init bash --config /home/amin/.cache/oh-my-posh/themes/MyOhMyPoshTheme.json)"
+
