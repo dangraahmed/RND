@@ -26,8 +26,23 @@ sudo apt install -y chromium-browser
 ```bash
 sudo apt install git
 ```
+## Install GitHub CLI
 
+```bash
+sudo apt install gh
+```
 ---
+
+## Install .NET SDK
+
+```bash
+sudo apt update
+```
+```bash
+sudo apt install dotnet-sdk-10.0
+```
+---
+
 
 ## Install Node
 
