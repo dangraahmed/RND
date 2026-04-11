@@ -23,5 +23,8 @@ oh-my-posh font install
 >> Select Fira Font
 
 Command to apply theme
+run following command to start oh-my-posh
 eval "$(oh-my-posh init bash --config /home/amin/.cache/oh-my-posh/themes/MyOhMyPoshTheme.json)"
 
+Or add above command to auto start at terminal startup
+nano ~/.bashrc
