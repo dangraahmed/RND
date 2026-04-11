@@ -137,3 +137,40 @@ newgrp docker
 ```
 
 ---
+
+
+## Setup Shortcut
+1. Create a shortcuts folder
+```bash
+mkdir -p ~/sc
+```
+2. Add it to PATH
+```bash
+nano ~/.bashrc
+```
+At the bottom, add:
+```bash
+export PATH="$HOME/sc:$PATH"
+```
+Then apply changes:
+```bash
+source ~/.bashrc
+```
+Create VsCode link to `sc` folder
+```bash
+ln -s /usr/bin/code ~/sc/vs
+```
+
+To create short to folder location
+```bash
+nano ~/sc/pj
+```
+```bash
+#!/bin/bash
+xdg-open ~/data/Project
+```
+Make it executable
+```bash
+chmod +x ~/sc/pj
+```
+---
