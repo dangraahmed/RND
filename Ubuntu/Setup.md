@@ -59,6 +59,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 nvm install 24
 ```
 
+## 💻 Install Angular CLI
+```bash
+npm install -g @angular/cli
+```
 ---
 
 ## 💻 Install Visual Studio Code
