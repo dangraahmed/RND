@@ -4,7 +4,7 @@ This document contains essential commands to set up a fresh Ubuntu system with c
 
 ---
 
-## 🔄 System Update
+## System Update
 
 ```bash
 sudo apt update
@@ -13,25 +13,11 @@ sudo apt upgrade
 
 ---
 
-## 🌐 Install Chromium Browser
+## Install Chromium Browser
 
 ```bash
 sudo apt install -y chromium-browser
 ```
-
----
-
-## Install GIT
-
-```bash
-sudo apt install git
-```
-## Install GitHub CLI
-
-```bash
-sudo apt install gh
-```
----
 
 ## Install .NET SDK
 
@@ -42,8 +28,6 @@ sudo apt update
 sudo apt install dotnet-sdk-10.0
 ```
 ---
-
-
 ## Install Node
 
 1. Download and install nvm:
@@ -58,10 +42,35 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```bash
 nvm install 24
 ```
-
+---
+## Install Microsoft Inshellisense
+Installation
+```bash
+npm install -g @microsoft/inshellisense
+```
+```bash
+is init
+```
+```bash
+is init bash >> ~/.bashrc
+```
+---
 ## 💻 Install Angular CLI
 ```bash
 npm install -g @angular/cli
+```
+---
+---
+
+## Install GIT
+
+```bash
+sudo apt install git
+```
+## Install GitHub CLI
+
+```bash
+sudo apt install gh
 ```
 ---
 
