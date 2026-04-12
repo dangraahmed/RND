@@ -153,7 +153,7 @@ newgrp docker
 ```bash
 mkdir -p ~/sc
 ```
-2. Add it to PATH
+2. Add it to PATH for terminal
 ```bash
 nano ~/.bashrc
 ```
@@ -161,6 +161,15 @@ At the bottom, add:
 ```bash
 export PATH="$HOME/sc:$PATH"
 ```
+Add it to PATH for run command
+```bash
+nano ~/.bashrc
+```
+At the bottom, add:
+```bash
+export PATH="$HOME/sc:$PATH"
+```
+
 Then apply changes:
 ```bash
 source ~/.bashrc
