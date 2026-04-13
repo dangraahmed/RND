@@ -12,7 +12,13 @@ sudo apt upgrade
 ```
 
 ---
+## Extension Manager
 
+```bash
+sudo apt install gnome-shell-extension-manager
+```
+
+---
 ## Install Chromium Browser
 
 ```bash
