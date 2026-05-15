@@ -17,10 +17,8 @@
             "mixed_threshold": 6,
             "style": "folder"
           },
-          "template": "<transparent,p:bg>\ue0b0</> <b>{{ .Path }}</b> ",
-          "trailing_diamond": "\ue0b0",
+          "template": " \uf07b <b>{{ .Path }}</b> ",
           "foreground": "p:fg-path",
-          "background": "p:bg",
           "type": "path",
           "style": "diamond"
         },
@@ -29,14 +27,10 @@
             "branch_icon": "\ue725 ",
             "cache_duration": "none",
             "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": false
+            "fetch_status": true
           },
-          "template": "<p:separator-fg> </><b>{{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
-          "trailing_diamond": "\ue0b0 ",
-          "leading_diamond": "<transparent,p:bg>\ue0b0",
+          "template": "<p:separator-fg></><b>{{.HEAD}} {{.BranchStatus}}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
           "foreground": "p:fg-git",
-          "background": "p:bg",
           "type": "git",
           "style": "diamond"
         }
@@ -44,100 +38,37 @@
       "newline": true
     },
     {
-      "type": "rprompt",
+      "type": "prompt",
+      "alignment": "right",
       "segments": [
         {
           "properties": {
-            "cache_duration": "none"
-          },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \ue77f <b>{{ .Full }}</b> ",
-          "foreground": "#0d6da8",
-          "background": "p:bg",
-          "type": "dotnet",
-          "style": "diamond"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \uf898 <b>{{ .Full }}</b> ",
-          "foreground": "#689f63",
-          "background": "p:bg",
-          "type": "node",
-          "style": "diamond"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "display_mode": "files",
-            "fetch_virtual_env": false
-          },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \ue235 <b>{{ .Full }}</b> ",
-          "foreground": "#FFDE57",
-          "background": "p:bg",
-          "type": "python",
-          "style": "diamond"
-        },
-        {
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none",
-            "precision": 2
-          },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
-          "template": " \ue266 <b>{{ round .PhysicalPercentUsed .Precision }}% </b>",
-          "background": "p:bg",
-          "type": "sysinfo",
-          "style": "diamond",
-          "foreground_templates": [
-            "{{ if gt .PhysicalPercentUsed 89 }}red{{ else }}p:fg-git{{ end }}"
-          ]
-        },
-        {
-          "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "<transparent,p:bg>\ue0b2</>",
           "template": " <b>{{ .FormattedMs }}</b> ",
           "foreground": "p:fg-git",
-          "background": "p:bg",
-          "type": "executiontime",
-          "style": "diamond"
-        },
-        {
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none"
-          },
-          "template": " {{ if gt .Code 0 }}\uf071{{ else }}\uf00c{{ end }} ",
-          "powerline_symbol": "\ue0b2",
-          "background": "p:bg",
-          "type": "exit",
-          "style": "powerline",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}white{{ else }}p:fg-git{{ end }}"
-          ],
-          "background_templates": [
             "{{ if gt .Code 0 }}red{{ end }}"
           ],
-          "invert_powerline": true
+          "type": "executiontime",
+          "style": "diamond"
         }
       ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": " {{.Icon}}  \ue285 ",
+          "foreground": "p:fg-git",
+          "type": "os",
+          "style": "diamond"
+        }
+      ],
+      "newline": true
     }
   ],
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "p:fg-git",
-    "template": "\n<b>{{ now | date \"15:04:05\" }}</b> \ue285 "
-  },
   "version": 3
 }
