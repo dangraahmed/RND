@@ -17,7 +17,19 @@ Install-Module -Name PSReadLine -force
 
 
 -------- For Linux
+# To install
 curl -s https://ohmyposh.dev/install.sh | bash -s
+
+# To add path and startup script when terminal load
+nano ~/.bashrc
+
+# Add following line to end of file
+# oh-my-posh
+export PATH=$PATH:/home/amin/.local/bin
+eval "$(oh-my-posh init bash --config /home/amin/.cache/oh-my-posh/themes/bubblesextra.omp.json)"
+
+
+
 oh-my-posh --version
 oh-my-posh font install
 >> Select Fira Font
