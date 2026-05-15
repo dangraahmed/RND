@@ -17,10 +17,9 @@
             "mixed_threshold": 6,
             "style": "folder"
           },
-          "template": " \uf07b <b>{{ .Path }}</b> ",
+          "template": "\n \uf07b <b>{{ .Path }}</b> ",
           "foreground": "p:fg-path",
-          "type": "path",
-          "style": "diamond"
+          "type": "path"
         },
         {
           "properties": {
@@ -31,8 +30,7 @@
           },
           "template": "<p:separator-fg></><b>{{.HEAD}} {{.BranchStatus}}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
           "foreground": "p:fg-git",
-          "type": "git",
-          "style": "diamond"
+          "type": "git"
         }
       ],
       "newline": true
@@ -51,8 +49,7 @@
           "foreground_templates": [
             "{{ if gt .Code 0 }}red{{ end }}"
           ],
-          "type": "executiontime",
-          "style": "diamond"
+          "type": "executiontime"
         }
       ]
     },
@@ -63,8 +60,7 @@
         {
           "template": " {{.Icon}}  \ue285 ",
           "foreground": "p:fg-git",
-          "type": "os",
-          "style": "diamond"
+          "type": "os"
         }
       ],
       "newline": true
