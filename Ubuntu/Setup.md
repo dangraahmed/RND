@@ -19,6 +19,16 @@ sudo apt upgrade
 
 # 2. Install Essential System Tools
 
+## Install SSH
+
+```bash
+sudo apt install openssh-server -y
+```
+
+```bash
+sudo systemctl enable --now ssh
+```
+
 ## Install Git
 
 ```bash
