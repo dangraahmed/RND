@@ -1,89 +1,125 @@
-# Ubuntu Setup Guide
+# Ubuntu Development Environment Setup Guide
 
-This document contains essential commands to set up a fresh Ubuntu system with commonly used tools and software.
+This guide contains tested commands and recommended installation order for setting up a fresh Ubuntu development environment.
 
 ---
 
-## System Update
+# 1. Update System Packages
+
+Always start with updating the package index and upgrading existing packages.
 
 ```bash
 sudo apt update
+```
+```bash
 sudo apt upgrade
 ```
 
 ---
-## Extension Manager
+
+# 2. Install Essential System Tools
+
+## Install Git
+
+```bash
+sudo apt install git
+```
+
+## Install GitHub CLI
+
+```bash
+sudo apt install gh
+```
+
+## Install Extension Manager
 
 ```bash
 sudo apt install gnome-shell-extension-manager
 ```
 
 ---
+
+# 3. Install Web Browser
+
 ## Install Chromium Browser
 
 ```bash
 sudo apt install -y chromium-browser
 ```
 
+---
+
+# 4. Install Development SDKs
+
 ## Install .NET SDK
 
 ```bash
 sudo apt update
 ```
+
 ```bash
 sudo apt install dotnet-sdk-10.0
 ```
----
-## Install Node
 
-1. Download and install nvm:
+---
+
+# 5. Install Node.js Using NVM
+
+## Step 1: Install NVM
+
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```
-2. In lieu of restarting the shell
+
+## Step 2: Load NVM Without Restarting Terminal
+
 ```bash
 \. "$HOME/.nvm/nvm.sh"
 ```
-3. Download and install Node.js:
+
+## Step 3: Install Node.js
+
 ```bash
 nvm install 24
 ```
+
 ---
+
+# 6. Install Global Node.js Tools
+
 ## Install Microsoft Inshellisense
-Installation
+
+### Installation
+
 ```bash
 npm install -g @microsoft/inshellisense
 ```
+
 ```bash
 is init
 ```
+
 ```bash
 is init bash >> ~/.bashrc
 ```
+
 ---
-## 💻 Install Angular CLI
+
+## Install Angular CLI
+
 ```bash
 npm install -g @angular/cli
 ```
----
----
 
-## Install GIT
-
-```bash
-sudo apt install git
-```
-## Install GitHub CLI
-
-```bash
-sudo apt install gh
-```
 ---
 
-## 💻 Install Visual Studio Code
+# 7. Install Visual Studio Code
 
-1. Download the `.deb` package from the official website.
-2. Install using:
+## Step 1: Download VS Code
+
+Download the `.deb` package from the official website.
+
+## Step 2: Install VS Code
 
 ```bash
 sudo apt install -y ./code_*.deb
@@ -91,24 +127,36 @@ sudo apt install -y ./code_*.deb
 
 ---
 
-## 🐳 Install Docker (Engine + CLI + Compose)
+# 8. Install Docker (Engine + CLI + Compose)
 
-### Step 1: Setup prerequisites
+## Step 1: Install Prerequisites
 
 ```bash
 sudo apt update
+```
+```bash
 sudo apt install ca-certificates curl
 ```
 
-### Step 2: Add Docker’s official GPG key
+---
+
+## Step 2: Add Docker Official GPG Key
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
+```
+
+```bash
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+```
+
+```bash
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 ```
 
-### Step 3: Add Docker repository
+---
+
+## Step 3: Add Docker Repository
 
 ```bash
 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
@@ -121,80 +169,143 @@ Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 ```
 
-### Step 4: Install Docker
+---
+
+## Step 4: Install Docker Packages
 
 ```bash
 sudo apt update
+```
+
+```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-### Step 6: Verify installation
+---
+
+## Step 5: Verify Docker Installation
 
 ```bash
 docker --version
+```
+
+```bash
 docker compose version
 ```
 
-### Step 7: Manage docker as a non-root user
-Create the docker group.
+---
+
+## Step 6: Configure Docker for Non-Root User
+
+### Create Docker Group
+
 ```bash
 sudo groupadd docker
 ```
 
-Add your user to the docker group.
+### Add Current User to Docker Group
+
 ```bash
 sudo usermod -aG docker $USER
 ```
-Log out and log back
-Or run following command
+
+### Apply Group Changes
+
+Log out and log back in
+
+OR run:
+
 ```bash
 newgrp docker
 ```
 
 ---
 
+# 9. Setup Custom Shortcuts
 
-## Setup Shortcut
-1. Create a shortcuts folder
+## Step 1: Create Shortcut Directory
+
 ```bash
 mkdir -p ~/sc
 ```
-2. Add it to PATH for terminal
+
+---
+
+## Step 2: Add `sc` Folder to PATH
+
+Open `.bashrc`
+
 ```bash
 nano ~/.bashrc
 ```
-At the bottom, add:
-```bash
-export PATH="$HOME/sc:$PATH"
-```
-Add it to PATH for run command
-```bash
-nano ~/.bashrc
-```
-At the bottom, add:
+
+Add the following line at the bottom:
+
 ```bash
 export PATH="$HOME/sc:$PATH"
 ```
 
-Then apply changes:
+For Run Command in Graphical Applications:
+
+```bash
+nano ~/.profile
+```
+
+Add the following line at the bottom:
+
+```bash
+export PATH="$HOME/sc:$PATH"
+```
+
+Apply changes:
+
 ```bash
 source ~/.bashrc
 ```
-Create VsCode link to `sc` folder
+
+---
+
+## Step 3: Create VS Code Shortcut
+
 ```bash
 ln -s /usr/bin/code ~/sc/vs
 ```
 
-To create short to folder location
+---
+
+## Step 4: Create Folder Shortcut Script
+
+Create shortcut file:
+
 ```bash
 nano ~/sc/pj
 ```
+
+Add the following content:
+
 ```bash
 #!/bin/bash
 xdg-open ~/data/Project
 ```
-Make it executable
+
+Make the script executable:
+
 ```bash
 chmod +x ~/sc/pj
 ```
+
 ---
+
+# Setup Complete
+
+Your Ubuntu system is now configured with:
+
+* Git & GitHub CLI
+* Chromium Browser
+* .NET SDK
+* Node.js (via NVM)
+* Angular CLI
+* VS Code
+* Docker
+* Terminal Shortcuts
+* GNOME Extension Manager
