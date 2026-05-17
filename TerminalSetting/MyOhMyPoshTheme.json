@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "bg": "#3f3f3f",
+    "fg-host": "#8f8f8f",
     "separator-fg": "#919191",
     "fg-path": "#43CCEA",
     "fg-git": "#39FF14"
@@ -40,11 +40,17 @@
       "alignment": "right",
       "segments": [
         {
+          "foreground": "p:fg-host",
+          "style": "plain",
+          "template": "\uf233 {{ .HostName }} ",
+          "type": "session"
+        },
+        {
           "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": " <b>{{ .FormattedMs }}</b> ",
+          "template": " <b> \uf017 {{ .FormattedMs }}</b> ",
           "foreground": "p:fg-git",
           "foreground_templates": [
             "{{ if gt .Code 0 }}red{{ end }}"
