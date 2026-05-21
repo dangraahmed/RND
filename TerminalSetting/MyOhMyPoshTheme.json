@@ -2,7 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "fg-host": "#8f8f8f",
-    "separator-fg": "#919191",
     "fg-path": "#43CCEA",
     "fg-git": "#39FF14"
   },
@@ -28,7 +27,7 @@
             "fetch_stash_count": true,
             "fetch_status": true
           },
-          "template": "<p:separator-fg></><b>{{.HEAD}} {{.BranchStatus}}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
+          "template": "<b>{{.HEAD}} {{.BranchStatus}}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}</b> ",
           "foreground": "p:fg-git",
           "type": "git"
         }
@@ -42,7 +41,7 @@
         {
           "foreground": "p:fg-host",
           "style": "plain",
-          "template": "\uf233 {{ .HostName }} ",
+          "template": "{{ if .SSHSession }} \uf233 {{ .UserName }}@{{ .HostName }} {{ end }}",
           "type": "session"
         },
         {
