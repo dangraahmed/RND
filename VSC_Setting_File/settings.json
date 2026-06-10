@@ -1,4 +1,5 @@
 {
+  "diffEditor.maxComputationTime": 0,
   "diffEditor.renderSideBySide": true,
   "editor.cursorBlinking": "expand",
   "editor.cursorSurroundingLines": 5,
@@ -8,24 +9,59 @@
   "editor.mouseWheelZoom": true,
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
-  "explorer.openEditors.visible": 0,
-  "files.exclude": {
-    "**/bin": true,
-    "**/obj": true
-  },
   "git.openRepositoryInParentFolders": "always",
-  "search.searchEditor.singleClickBehaviour": "peekDefinition",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Visual Studio 2017 Light - C++",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorTheme": "Default Light Modern",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#1111111e",
-    "activityBar.foreground": "#111111ee",
     "editor.lineHighlightBackground": "#133fcf1e",
     "editor.lineHighlightBorder": "#aaaa"
   },
-  "scm.defaultViewMode": "tree",
-  "terminal.integrated.hideOnStartup": "always"
+
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorCustomizations",
+    "workbench.iconTheme",
+    "window.zoomLevel",
+    "git.openRepositoryInParentFolders",
+    "scm.defaultViewMode",
+    "diffEditor.renderSideBySide",
+    "diffEditor.maxComputationTime",
+    "editor.smoothScrolling",
+    "editor.cursorBlinking",
+    "editor.cursorSurroundingLines",
+    "editor.fontSize",
+    "editor.fontWeight",
+    "editor.fontFamily",
+    "editor.mouseWheelZoom",
+    "editor.minimap.enabled"
+  ]
 }
+
+
+
+// Angular
+{
+    "workbench.colorTheme": "Quiet Light",
+    "window.title": "🌐 ${profileName} • ${rootName} • ${activeEditorShort}",
+}
+
+
+// Node
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "window.title": "📦 ${profileName} • ${rootName} • ${activeEditorShort}",
+}
+
+// Python
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "window.title": "🐍 ${profileName} • ${rootName} • ${activeEditorShort}",
+}
+
+// C#
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "window.title": "🪟 ${profileName} • ${rootName} • ${activeEditorShort}",
+}
+
+
