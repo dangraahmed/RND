@@ -49,12 +49,24 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": " <b> \uf017 {{ .FormattedMs }}</b> ",
+          "template": " <b>\uf017 {{.FormattedMs}}</b>",
           "foreground": "p:fg-git",
           "foreground_templates": [
             "{{ if gt .Code 0 }}red{{ end }}"
           ],
           "type": "executiontime"
+        },
+        {
+          "foreground": "p:fg-host",
+          "style": "plain",
+          "template": "<b> | </b>",
+          "type": "text"
+        },
+        {
+          "foreground": "p:fg-path",
+          "style": "plain",
+          "template": "<b>{{.Format}}</b>",
+          "type": "time"
         }
       ]
     },
