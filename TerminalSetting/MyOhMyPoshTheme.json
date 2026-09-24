@@ -65,7 +65,7 @@
         {
           "foreground": "p:fg-path",
           "style": "plain",
-          "template": "<b>{{.Format}}</b>",
+          "template": "<b>{{ .CurrentDate | date .Format }}</b>",
           "type": "time"
         }
       ]
